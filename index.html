@@ -1,12 +1,346 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Currículo</title>
+
+<html class="scroll-smooth" lang="pt-BR"><head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Henrique Ulbrich de Souza | Front End Software Developer</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700;800&family=Inter:wght@400;500&family=Geist:wght@400;500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Hanken+Grotesk:wght@100..900&family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#dae2fd",
+                        "on-secondary": "#ffffff",
+                        "background": "#fcf8fa",
+                        "secondary-fixed": "#c9e6ff",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#131b2e",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#1b1b1d",
+                        "tertiary-fixed-dim": "#b7c8e1",
+                        "on-secondary-fixed": "#001e2f",
+                        "inverse-on-surface": "#f3f0f2",
+                        "surface-variant": "#e4e2e4",
+                        "surface-container": "#f0edef",
+                        "secondary-container": "#39b8fd",
+                        "on-primary-fixed": "#131b2e",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#fcf8fa",
+                        "tertiary-fixed": "#d3e4fe",
+                        "tertiary-container": "#0b1c30",
+                        "outline-variant": "#c6c6cd",
+                        "primary": "#000000",
+                        "on-primary-container": "#7c839b",
+                        "inverse-primary": "#bec6e0",
+                        "secondary-fixed-dim": "#89ceff",
+                        "outline": "#76777d",
+                        "on-background": "#1b1b1d",
+                        "surface-tint": "#565e74",
+                        "surface-dim": "#dcd9db",
+                        "on-tertiary-fixed": "#0b1c30",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#004666",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "primary-fixed-dim": "#bec6e0",
+                        "secondary": "#006591",
+                        "surface-container-highest": "#e4e2e4",
+                        "surface-container-high": "#eae7e9",
+                        "inverse-surface": "#303032",
+                        "surface": "#fcf8fa",
+                        "on-tertiary-container": "#75859d",
+                        "on-secondary-fixed-variant": "#004c6e",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f6f3f5",
+                        "on-surface-variant": "#45464d",
+                        "tertiary": "#000000",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "on-tertiary-fixed-variant": "#38485d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "1.25rem",
+                        "container-max": "1100px",
+                        "gutter": "1.5rem",
+                        "margin-desktop": "2.5rem",
+                        "element-gap": "1.5rem",
+                        "section-gap": "5rem"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Hanken Grotesk"],
+                        "body-lg": ["Inter"],
+                        "mono-sm": ["Geist"],
+                        "display-lg-mobile": ["Hanken Grotesk"],
+                        "headline-sm": ["Hanken Grotesk"],
+                        "label-md": ["Geist"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["30px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "mono-sm": ["13px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "800"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 1;
+        }
+
+        .grid-pattern {
+            background-image: radial-gradient(circle, #76777d 1px, transparent 1px);
+            background-size: 32px 32px;
+            opacity: 0.05;
+        }
+
+        .shadow-soft {
+            box-shadow: 0px 4px 20px rgba(15, 23, 42, 0.05);
+        }
+
+        .experience-node::before {
+            content: '';
+            position: absolute;
+            left: -31px;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #39b8fd;
+            border: 2px solid #ffffff;
+            z-index: 10;
+        }
+    </style>
 </head>
-<body>
-<h1>Currículo Profissional</h1>
-<p>Docker está funcionando!</p>
-</body>
-</html>
+<body class="bg-background text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="bg-surface dark:bg-surface-container-lowest w-full top-0 sticky border-b border-outline-variant dark:border-outline z-50">
+    <div class="flex justify-between items-center h-16 max-w-container-max mx-auto px-margin-desktop">
+        <span class="font-headline-sm text-headline-sm font-bold text-on-surface dark:text-on-surface">Henrique Ulbrich de Souza</span>
+        <div class="hidden md:flex items-center gap-8">
+            <a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary dark:border-primary-fixed pb-1 font-body-md text-body-md cursor-pointer transition-all duration-200" href="#Profile">Profile</a>
+            <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md cursor-pointer duration-200" href="#Skills">Skills</a>
+            <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md cursor-pointer duration-200" href="#Experience">Experience</a>
+            <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md cursor-pointer duration-200" href="#Education">Education</a>
+        </div>
+        <a href="/curriculo-henrique.pdf" download="Henrique_Ulbrich_CV.pdf" class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md text-label-md hover:bg-opacity-90 transition-all inline-block text-center cursor-pointer">
+            Download CV
+        </a>
+    </div>
+</nav>
+<!-- Background Pattern -->
+<div class="fixed inset-0 grid-pattern pointer-events-none"></div>
+<main class="relative z-10">
+    <section class="max-w-container-max mx-auto px-margin-desktop pt-16 md:pt-24 pb-section-gap" id="Profile">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+            <div class="md:col-span-8">
+                <span class="font-label-md text-label-md text-secondary uppercase tracking-widest mb-4 block">Front End Software Developer</span>
+                <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">Building precise and technical user interfaces.</h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    Desenvolvedor de Software Front End com 1 ano e 9 meses de experiência, focado em JavaScript e REACT. Idiomas: Inglês: Intermediário (B2). Especialista em transformar requisitos complexos em experiências digitais fluidas.
+                </p>
+                <div class="flex flex-wrap gap-4 mt-8">
+                    <a class="flex items-center gap-2 bg-surface-container-high px-4 py-2 rounded-full border border-outline-variant hover:border-primary transition-colors group" href="mailto:henrique1_souza@hotmail.com">
+                        <span class="material-symbols-outlined text-secondary group-hover:text-primary transition-colors" data-icon="mail">mail</span>
+                        <span class="font-label-md text-label-md">henrique1_souza@hotmail.com</span>
+                    </a>
+                    <a class="flex items-center gap-2 bg-surface-container-high px-4 py-2 rounded-full border border-outline-variant hover:border-primary transition-colors group" href="https://www.linkedin.com/in/henrique-ulbrich-de-souza-748104251/">
+                        <span class="material-symbols-outlined text-secondary group-hover:text-primary transition-colors" data-icon="link">link</span>
+                        <span class="font-label-md text-label-md">LinkedIn</span>
+                    </a>
+                    <div class="flex items-center gap-2 bg-surface-container-high px-4 py-2 rounded-full border border-outline-variant">
+                        <span class="material-symbols-outlined text-secondary" data-icon="location_on">location_on</span>
+                        <span class="font-label-md text-label-md">Curitiba, PR</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-surface-container-high px-4 py-2 rounded-full border border-outline-variant">
+                        <span class="material-symbols-outlined text-secondary" data-icon="call">call</span>
+                        <span class="font-label-md text-label-md">+55 41 99941-1839</span>
+                    </div>
+                </div>
+            </div>
+            <div class="md:col-span-4 mt-8 md:mt-0 flex justify-center items-start">
+                <div class="relative w-full aspect-square max-w-[320px] rounded-xl overflow-hidden border border-outline-variant shadow-soft">
+                    <img alt="Henrique Ulbrich de Souza" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="A professional, high-end corporate headshot of a software developer with a focused expression. The setting is a minimalist, modern studio with soft, directional lighting that creates a sophisticated light-mode aesthetic. The background is a clean, neutral slate white, emphasizing technical mastery and reliability. The overall mood is polished and contemporary, reflecting a mastery of modern front-end technologies." src="henriquee.jpeg"/>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Technical Skills -->
+    <section class="bg-surface-container-low py-section-gap" id="Skills">
+        <div class="max-w-container-max mx-auto px-margin-desktop">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <h2 class="font-headline-md text-headline-md text-primary">Technical Stack</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant mt-2">Tools and technologies I use to build software.</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                <!-- Core Skills -->
+                <div class="p-6 bg-secondary-fixed rounded-xl border border-outline-variant transition-all hover:shadow-soft flex flex-col items-center justify-center text-center group">
+                    <span class="material-symbols-outlined text-on-secondary-fixed text-4xl mb-3" data-icon="code">code</span>
+                    <span class="font-headline-sm text-headline-sm text-on-secondary-fixed">React.js</span>
+                </div>
+                <div class="p-6 bg-secondary-fixed rounded-xl border border-outline-variant transition-all hover:shadow-soft flex flex-col items-center justify-center text-center group">
+                    <span class="material-symbols-outlined text-on-secondary-fixed text-4xl mb-3" data-icon="javascript">javascript</span>
+                    <span class="font-headline-sm text-headline-sm text-on-secondary-fixed">TypeScript</span>
+                </div>
+                <!-- Tooling Skills -->
+                <div class="p-6 bg-white rounded-xl border border-outline-variant transition-all hover:shadow-soft flex flex-col items-center justify-center text-center">
+                    <span class="material-symbols-outlined text-outline text-4xl mb-3" data-icon="api">api</span>
+                    <span class="font-headline-sm text-headline-sm text-primary">REST APIs</span>
+                </div>
+                <div class="p-6 bg-white rounded-xl border border-outline-variant transition-all hover:shadow-soft flex flex-col items-center justify-center text-center">
+                    <span class="material-symbols-outlined text-outline text-4xl mb-3" data-icon="html">html</span>
+                    <span class="font-headline-sm text-headline-sm text-primary">HTML5/CSS3</span>
+                </div>
+                <div class="p-6 bg-white rounded-xl border border-outline-variant transition-all hover:shadow-soft flex flex-col items-center justify-center text-center">
+                    <span class="material-symbols-outlined text-outline text-4xl mb-3" data-icon="grid_view">grid_view</span>
+                    <span class="font-headline-sm text-headline-sm text-primary">Bootstrap</span>
+                </div>
+                <div class="p-6 bg-white rounded-xl border border-outline-variant transition-all hover:shadow-soft flex flex-col items-center justify-center text-center">
+                    <span class="material-symbols-outlined text-outline text-4xl mb-3" data-icon="source">source</span>
+                    <span class="font-headline-sm text-headline-sm text-primary">Git/GitHub</span>
+                </div>
+                <div class="p-6 bg-white rounded-xl border border-outline-variant transition-all hover:shadow-soft flex flex-col items-center justify-center text-center">
+                    <span class="material-symbols-outlined text-outline text-4xl mb-3" data-icon="view_kanban">view_kanban</span>
+                    <span class="font-headline-sm text-headline-sm text-primary">Trello</span>
+                </div>
+                <div class="p-6 bg-white rounded-xl border border-outline-variant transition-all hover:shadow-soft flex flex-col items-center justify-center text-center">
+                    <span class="material-symbols-outlined text-outline text-4xl mb-3" data-icon="draw">draw</span>
+                    <span class="font-headline-sm text-headline-sm text-primary">Figma</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Experience -->
+    <section class="max-w-container-max mx-auto px-margin-desktop py-section-gap" id="Experience">
+        <h2 class="font-headline-md text-headline-md text-primary mb-12">Professional Journey</h2>
+        <div class="relative ml-8 border-l-2 border-outline-variant pl-12 space-y-element-gap">
+            <!-- Role 1 -->
+            <div class="experience-node relative">
+                <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+                    <div>
+                        <h3 class="font-headline-sm text-headline-sm text-primary">Desenvolvedor de Software Junior</h3>
+                        <p class="font-body-md text-body-md text-secondary font-medium">Mundimed</p>
+                    </div>
+                    <span class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded mt-2 md:mt-0 inline-block">Setembro 2024 – Presente</span>
+                </div>
+                <ul class="font-body-md text-body-md text-on-surface-variant space-y-2 mt-4 list-disc pl-5">
+                    <li>Desenvolvimento de Interfaces modernas utilizando React e Bootstrap, priorizando responsividade e UX.</li>
+                    <li>Manutenção Evolutiva focada na correção de bugs críticos e refatoração de código legado para melhor performance.</li>
+                    <li>Consumo de Dados através de APIs RESTful para integração dinâmica de funcionalidades.</li>
+                    <li>Colaboração ativa via Git e processos rigorosos de Code Review para garantir a qualidade do software.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- Education & Languages -->
+    <section class="bg-surface py-section-gap border-t border-outline-variant" id="Education">
+        <div class="max-w-container-max mx-auto px-margin-desktop">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Education -->
+                <div>
+                    <h2 class="font-headline-md text-headline-md text-primary mb-8">Education</h2>
+                    <div class="bg-white p-8 border border-outline-variant rounded-xl shadow-soft">
+                        <span class="font-label-md text-label-md text-secondary mb-2 block">Graduation</span>
+                        <h3 class="font-headline-sm text-headline-sm text-primary">Análise e Desenvolvimento de Sistemas</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant mt-1">Universidade Federal do Paraná (UFPR)</p>
+                        <div class="flex items-center gap-2 mt-4 text-on-surface-variant">
+                            <span class="material-symbols-outlined text-sm" data-icon="event">event</span>
+                            <span class="font-label-md text-label-md">Conclusão: Junho 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Languages & Location -->
+                <div>
+                    <h2 class="font-headline-md text-headline-md text-primary mb-8">Additional Info</h2>
+                    <div class="space-y-4">
+                        <div class="bg-white p-6 border border-outline-variant rounded-xl flex items-center justify-between">
+                            <div class="flex items-center gap-4">
+                                <span class="material-symbols-outlined text-secondary" data-icon="language">language</span>
+                                <div>
+                                    <p class="font-label-md text-label-md text-on-surface-variant">Language</p>
+                                    <p class="font-body-md text-body-md text-primary font-bold">Inglês: Intermediário (B2)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 border border-outline-variant rounded-xl flex items-center justify-between">
+                            <div class="flex items-center gap-4">
+                                <span class="material-symbols-outlined text-secondary" data-icon="map">map</span>
+                                <div>
+                                    <p class="font-label-md text-label-md text-on-surface-variant">Location</p>
+                                    <p class="font-body-md text-body-md text-primary font-bold">Curitiba, Paraná, Brasil</p>
+                                </div>
+                            </div>
+                            <div class="w-16 h-16 rounded overflow-hidden">
+                                <img alt="Curitiba Map" class="w-full h-full object-cover" data-location="Curitiba" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC10CwnCAL0bjYHE3FtHVYYUXsjPjXI6vmL3dgXDhKaUrl5jcZT8slyLVzs99E_B-TkP2SDzYB75viFh6fBOQVPHHFEKuF5zRL2FVm75N62oFWtsn4qcXLFzCMaPFRuhzBE0aLKptTTHhLcaC6mbWbFT3vh8cCwfIyXwoPjpOCsoxpxy9j-6p1Ep3Q2VifHG8C-bVcccnlUrBMVWE5R0CBO64vilTborIfqvNLj8v1zA_EAobfc-lJ_eTEj6wIu5xLjJWv8xiPwcH7m"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<!-- Foot -->
+<footer class="bg-primary-container dark:bg-tertiary-container w-full mt-section-gap">
+    <div class="flex flex-col md:flex-row justify-between items-center py-12 px-margin-desktop max-w-container-max mx-auto">
+        <div class="mb-6 md:mb-0">
+            <span class="font-headline-sm text-headline-sm text-on-primary block">Henrique Ulbrich de Souza</span>
+            <p class="text-on-primary-container dark:text-on-tertiary-container font-body-md text-body-md mt-2">© 2024 Henrique Ulbrich de Souza • Front End Software Developer</p>
+        </div>
+        <div class="flex gap-6">
+            <a class="text-on-primary-container dark:text-on-tertiary-container hover:text-white transition-opacity opacity-90 hover:opacity-100 font-body-md text-body-md" href="https://github.com/henriqueulb">GitHub</a>
+            <a class="text-on-primary-container dark:text-on-tertiary-container hover:text-white transition-opacity opacity-90 hover:opacity-100 font-body-md text-body-md" href="https://www.linkedin.com/in/henrique-ulbrich-de-souza-748104251/">LinkedIn</a>
+            <a class="text-on-primary-container dark:text-on-tertiary-container hover:text-white transition-opacity opacity-90 hover:opacity-100 font-body-md text-body-md" href="mailto:henrique1_souza@hotmail.com">Email</a>
+        </div>
+    </div>
+</footer>
+<script>
+    window.addEventListener('scroll', () => {
+        const sections = ['Profile', 'Skills', 'Experience', 'Education'];
+        const navLinks = document.querySelectorAll('nav a');
+
+        let current = '';
+        sections.forEach(section => {
+            const element = document.getElementById(section);
+            if (element) {
+                const sectionTop = element.offsetTop;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section;
+                }
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('text-primary', 'dark:text-primary-fixed', 'font-bold', 'border-b-2', 'border-primary', 'dark:border-primary-fixed', 'pb-1');
+            link.classList.add('text-on-surface-variant', 'dark:text-on-surface-variant');
+
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.remove('text-on-surface-variant', 'dark:text-on-surface-variant');
+                link.classList.add('text-primary', 'dark:text-primary-fixed', 'font-bold', 'border-b-2', 'border-primary', 'dark:border-primary-fixed', 'pb-1');
+            }
+        });
+    });
+</script>
+</body></html>
