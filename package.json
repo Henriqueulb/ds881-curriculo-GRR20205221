@@ -1,0 +1,10 @@
+{
+  "name": "curriculo-ds881",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite --port 8080 --host 0.0.0.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
